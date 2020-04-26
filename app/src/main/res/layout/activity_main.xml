@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#fff5cc">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_numbers"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Numbers"
+            android:gravity="center"
+            android:background="@color/numbersBackground"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
+
+            />
+        <TextView
+            android:id="@+id/textView_family"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Family members"
+            android:gravity="center"
+            android:background="@color/familyBackground"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
+
+            />
+        <TextView
+            android:id="@+id/textView_colors"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Colors"
+            android:gravity="center"
+            android:background="@color/colorsBackground"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
+
+            />
+        <TextView
+            android:id="@+id/textView_phrases"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Phrases"
+            android:gravity="center"
+            android:background="@color/phrasesBackground"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
+
+            />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
