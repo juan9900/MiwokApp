@@ -22,13 +22,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:tooltipText="English Word"
-                tools:text="English word"
+                tools:text="EnglishWord"
                 android:id="@+id/englishWord"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:tooltipText="Miwok Word"
+                android:tooltipText="MiwokWord"
                 tools:text="Miwok word"
                 android:id="@+id/miwokWord"/>
 
