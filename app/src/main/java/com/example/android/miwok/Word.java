@@ -1,32 +1,28 @@
 package com.example.android.miwok;
 
-import android.media.Image;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 public class Word {
     private String defaultTranslation;
     private String miwokWord;
     private int pictureId;
     private boolean hasImage;
+    private int audioId;
 
 
 
-    public Word(String miwokWord, String defaultTranslation, int pictureId) {
+
+    public Word(String miwokWord, String defaultTranslation, int pictureId, int audioId) {
         this.miwokWord = miwokWord;
         this.defaultTranslation = defaultTranslation;
         this.pictureId = pictureId;
         this.hasImage = true;
+        this.audioId = audioId;
     }
 
-    public Word(String miwokWord, String defaultTranslation) {
+    public Word(String miwokWord, String defaultTranslation, int audioId) {
         this.miwokWord = miwokWord;
         this.defaultTranslation = defaultTranslation;
         this.hasImage = false;
+        this.audioId = audioId;
     }
 
 
@@ -46,5 +42,7 @@ public class Word {
         return hasImage;
     }
 
-
+    public int getAudioId() {
+        return audioId;
+    }
 }
