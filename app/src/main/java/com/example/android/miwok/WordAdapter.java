@@ -57,15 +57,23 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageWord.setVisibility(View.GONE);
         }
 
-        ImageView playBtn = listItemView.findViewById(R.id.playButton);
+        final ImageView playBtn = listItemView.findViewById(R.id.playButton);
         playBtn.setOnClickListener(new View.OnClickListener() {
             int audioId = currentWord.getAudioId();
             @Override
             public void onClick(View v) {
+                playBtn.setEnabled(false);
                 MediaPlayer mp = MediaPlayer.create(getContext(),audioId);
                 mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        playBtn.setEnabled(true);
+                    }
+                });
             }
         });
+
 
         return listItemView;
     }
