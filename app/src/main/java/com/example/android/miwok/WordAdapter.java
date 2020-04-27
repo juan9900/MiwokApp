@@ -1,10 +1,13 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -14,8 +17,11 @@ import androidx.annotation.Nullable;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
-    public WordAdapter(@NonNull Context context, @NonNull ArrayList<Word> Word) {
+    private int colorBackgroundId;
+
+    public WordAdapter(@NonNull Context context, @NonNull ArrayList<Word> Word, int colorBackgroundId) {
         super(context, 0, Word);
+        this.colorBackgroundId = colorBackgroundId;
     }
 
     @NonNull
@@ -26,6 +32,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_list,parent,false);
         }
 
+        //Set the background color
+        listItemView.setBackgroundResource(colorBackgroundId);
         //Get the Word located in this position in the list
         Word currentWord = getItem(position);
 
@@ -39,6 +47,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //Set the text to the miwok word
         miwokWord.setText(currentWord.getMiwokWord());
 
+        //Find the image view for the word and set the correspondent image if there is one
+        ImageView imageWord = listItemView.findViewById(R.id.imageWord);
+        if(currentWord.getHasImage()){
+            imageWord.setImageResource(currentWord.getPictureId());
+        }else{
+            imageWord.setVisibility(View.GONE);
+        }
 
         return listItemView;
     }

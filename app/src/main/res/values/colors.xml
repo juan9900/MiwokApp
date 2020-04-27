@@ -8,5 +8,6 @@
     <color name="familyBackground">#04bf2c</color>
     <color name="colorsBackground">#7000a3</color>
     <color name="phrasesBackground">#0095a3</color>
+    <color name="generalBackground">#fff5cc</color>
 
 </resources>

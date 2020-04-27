@@ -17,54 +17,54 @@
             android:id="@+id/textView_numbers"
             android:layout_width="match_parent"
             android:layout_height="75dp"
+            android:paddingLeft="16dp"
             android:text="Numbers"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:background="@color/numbersBackground"
             android:textColor="#fff"
             android:textSize="18sp"
             android:clickable="true"
             android:focusable="true"
-
-            />
+            android:textStyle="bold"/>
         <TextView
             android:id="@+id/textView_family"
             android:layout_width="match_parent"
             android:layout_height="75dp"
+            android:paddingLeft="16dp"
             android:text="Family members"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:background="@color/familyBackground"
             android:textColor="#fff"
             android:textSize="18sp"
             android:clickable="true"
             android:focusable="true"
-
-            />
+            android:textStyle="bold"/>
         <TextView
             android:id="@+id/textView_colors"
             android:layout_width="match_parent"
             android:layout_height="75dp"
+            android:paddingLeft="16dp"
             android:text="Colors"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:background="@color/colorsBackground"
             android:textColor="#fff"
             android:textSize="18sp"
             android:clickable="true"
             android:focusable="true"
-
-            />
+            android:textStyle="bold"/>
         <TextView
             android:id="@+id/textView_phrases"
             android:layout_width="match_parent"
             android:layout_height="75dp"
+            android:paddingLeft="16dp"
             android:text="Phrases"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:background="@color/phrasesBackground"
             android:textColor="#fff"
             android:textSize="18sp"
             android:clickable="true"
             android:focusable="true"
-
-            />
+            android:textStyle="bold"/>
 
 
     </LinearLayout>
