@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -52,6 +53,7 @@ public class FamilyMembersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.words);
+
 
         audioManager = (AudioManager) FamilyMembersActivity.this.getSystemService(Context.AUDIO_SERVICE);
 

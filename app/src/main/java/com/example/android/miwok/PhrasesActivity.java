@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -55,6 +56,7 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.words);
+
 
         audioManager = (AudioManager) PhrasesActivity.this.getSystemService(Context.AUDIO_SERVICE);
 
