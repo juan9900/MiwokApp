@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:background="?android:attr/selectableItemBackground">
 
 
-
-
-    <ImageView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
             android:id="@+id/imageWord"
             android:layout_width="88dp"
             android:layout_height="88dp"
             android:background="@color/generalBackground"
             android:src="@mipmap/ic_launcher"
+            android:layout_alignParentLeft="true"
             />
 
-    <LinearLayout
-        android:id="@+id/itemsLinearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="88dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:paddingLeft="16dp">
+        <LinearLayout
+            android:id="@+id/itemsLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:layout_toRightOf="@id/imageWord">
 
-        <TextView
-            android:id="@+id/englishWord"
+            <TextView
+                android:id="@+id/englishWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="EnglishWord" />
+
+            <TextView
+                android:id="@+id/miwokWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="MiwokWord"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            tools:text="EnglishWord" />
-
-        <TextView
-            android:id="@+id/miwokWord"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            tools:text="MiwokWord" />
-    </LinearLayout>
-    <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_play_arrow_white_24dp"
-        android:layout_gravity="center_vertical"
-        android:paddingRight="25dp"
-        android:id="@+id/playButton"/>
+            android:src="@drawable/ic_play_arrow_white_24dp"
+            android:paddingRight="16dp"
+            android:id="@+id/playButton"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
 
 
 
 
-</LinearLayout>
+
+
+</RelativeLayout>

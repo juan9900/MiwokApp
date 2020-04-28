@@ -13,58 +13,86 @@
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView_numbers"
+
+        <!-- Numbers category -->
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:paddingLeft="16dp"
-            android:text="Numbers"
-            android:gravity="center_vertical"
-            android:background="@color/numbersBackground"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:clickable="true"
-            android:focusable="true"
-            android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/textView_family"
+            android:layout_height="wrap_content"
+            android:background="@color/numbersBackground">
+            <TextView
+                android:id="@+id/textView_numbers"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:paddingLeft="16dp"
+                android:text="@string/numbers"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:paddingLeft="16dp"
-            android:text="Family members"
-            android:gravity="center_vertical"
-            android:background="@color/familyBackground"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:clickable="true"
-            android:focusable="true"
-            android:textStyle="bold"/>
-        <TextView
+            android:layout_height="wrap_content"
+            android:background="@color/familyBackground">
+            <TextView
+                android:id="@+id/textView_family"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:paddingLeft="16dp"
+                android:text="@string/family_members"
+                android:gravity="center_vertical"
+                android:background="@color/familyBackground"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorsBackground">
+            <TextView
             android:id="@+id/textView_colors"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:paddingLeft="16dp"
-            android:text="Colors"
+            android:text="@string/colors"
             android:gravity="center_vertical"
-            android:background="@color/colorsBackground"
+            android:background="?android:attr/selectableItemBackground"
             android:textColor="#fff"
             android:textSize="18sp"
             android:clickable="true"
             android:focusable="true"
             android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/textView_phrases"
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:paddingLeft="16dp"
-            android:text="Phrases"
-            android:gravity="center_vertical"
-            android:background="@color/phrasesBackground"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:clickable="true"
-            android:focusable="true"
-            android:textStyle="bold"/>
+            android:layout_height="wrap_content"
+            android:background="@color/phrasesBackground">
+            <TextView
+                android:id="@+id/textView_phrases"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:paddingLeft="16dp"
+                android:text="@string/phrases"
+                android:gravity="center_vertical"
+                android:background="@color/phrasesBackground"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+        </FrameLayout>
+
+
+
 
 
     </LinearLayout>

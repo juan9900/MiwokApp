@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -57,26 +58,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageWord.setVisibility(View.GONE);
         }
 
-        final ImageView playBtn = listItemView.findViewById(R.id.playButton);
-        playBtn.setOnClickListener(new View.OnClickListener() {
-            int audioId = currentWord.getAudioId();
-            @Override
-            public void onClick(View v) {
-                playBtn.setEnabled(false);
-                MediaPlayer mp = MediaPlayer.create(getContext(),audioId);
-                mp.start();
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        playBtn.setEnabled(true);
-                    }
-                });
-            }
-        });
 
 
         return listItemView;
     }
+
+
 
 
 
